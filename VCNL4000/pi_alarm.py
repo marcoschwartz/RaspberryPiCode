@@ -23,8 +23,6 @@ while True:
 	# If the threshold is crossed, start the alarm
 	if (proximity > 3000):
 		GPIO.output(gpio_pin,True)
-		timer_run = True
-		timer = 0
 		os.system("aplay alarm_sound.wav")
 		GPIO.output(gpio_pin,False)
 		
